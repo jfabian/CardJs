@@ -1265,7 +1265,7 @@ CardJs.prototype.setupExpiryInput = function() {
         $this.expiryMonthInput.val($this.expiryMonth());
 
 
-        $this.expiryYearInput.val(val.length == 7 ? val.substr(5,2) : null);
+        $this.expiryYearInput.val(7 == val.length ? val.substr(5, 2) : (9 == val.length ? val.substr(7, 2) : null));
       }
     });
 
